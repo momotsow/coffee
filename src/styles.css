@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px !important;
+    padding: 0px;
+    font-family: 'Poppins';
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); /* downloading font(s) */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+ul {
+   list-style-type: none; 
+   margin: 0;
+   padding: 0;
+}
