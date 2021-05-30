@@ -1,86 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); /* downloading font(s) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* downloading font(s) */
 body {
-    margin: 0;
-    font-family: 'Poppins';
+  margin: 0;
+  font-family: "Poppins";
 }
 a {
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 ul {
-   list-style-type: none; 
-   margin: 0;
-   padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /************** side menu backgroung and content ***********************/
 
 .left {
-    position: relative;
+  position: relative;
 }
-
 
 .firstmenu {
-    display: block;
-    padding: 2em 0 1em 1em;
+  display: block;
+  padding: 2em 0 1em 1em;
 }
 
-.firstmenu li{
-    padding-bottom: 1em;
-    font-weight: 500;
-    font-size: larger;
-    
+.firstmenu li {
+  padding-bottom: 1em;
+  font-weight: 500;
+  font-size: larger;
 }
-.firstmenu li:hover{
+.firstmenu li:hover {
   font-weight: bold;
 }
 .current {
-    color: rgb(214, 139, 0);
-    font-weight: bold;
+  color: rgb(214, 139, 0);
+  font-weight: bold;
 }
 
 /**************** middle section *********************/
 
 .center {
-    display: block;
+  display: block;
 }
 .points {
-    display: flex;
-    color: #b3b3b3;
-    justify-content: space-between;
-    width: 300px;
-    margin-left: 11.5em;
+  display: flex;
+  color: #b3b3b3;
+  justify-content: space-between;
+  width: 300px;
+  margin-left: 11.5em;
 }
 .secondmenu {
-    display: block;
-    font-size: x-large;
-    font-weight: 700;
-    margin-left: 8em;
-    text-align: left;
-    margin-top: 4.9em;
+  display: block;
+  font-size: x-large;
+  font-weight: 700;
+  margin-left: 8em;
+  text-align: left;
+  margin-top: 4.9em;
 }
 .coffees {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 .coffee {
-    display: flex;
+  display: flex;
 }
 
 .right {
-    margin-top: 570px;
-    margin-left: 8.5em;
-
-    
+  margin-top: 1em;
+  margin-left: 8.5em;
 }
-.right input {
-    border: none;
-    width: 7em;
-    height: 2.5em;
+input {
+  border: none;
+  border-radius: 3px;
+  height: 2.5em;
+  font-weight: 600;
 }
 .right .comment-cta {
-    margin-right: 1em;
+  margin-right: 1em;
+  width: 7em;
 }
-.right .order-cta {
-    background: rgb(214, 139, 0);
-    color: #ffffff;
+.redeem-cta {
+  width: 9em;
+  background: rgb(214, 139, 0);
+  color: #ffffff;
 }

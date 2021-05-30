@@ -5,11 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './points.component.html',
   styleUrls: ['./points.component.css']
 })
-export class PointsComponent implements OnInit {
+export class PointsComponent {
 
-  constructor() { }
+  public currentNumber = 0;
+  public pointsminus = 0;
+  constructor () { }
 
-  ngOnInit(): void {
+  public minus () {
+    if(this.currentNumber >= 10) {
+      this.currentNumber = this.currentNumber - 10;
+    }
+    else {
+      this.currentNumber;
+    }
+    
   }
-
 }

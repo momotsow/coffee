@@ -1,24 +1,83 @@
-<div class="points">
-  <p>{{currentNumber}}</p>
-  <p>converted points : R {{currentNumber}}.00</p>
-</div>
-<div class="secondmenu">
-    <div class="menulist2">
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title text-center">Sorry</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>You can only redeem your free Coffee once you have a minimum of 10 points</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
+
+  <ng-template #redeemcontent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title text-center">Congradulations</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Congradulations, You Just Redeemed Your Free Coffee</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
+  
+  <ng-template #historycontent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title text-center">History</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>You had: {{oldcurrentNumber}} Overall Points</p>
+      <p>You have: {{pointNumber}} remaining points you can use</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
+
+<div class="center">
+    <div class="points">
+        <div class="point">
+            <p>Points: {{pointNumber}} </p>
+            <p> Converted Points : R {{pointNumber}}.00</p>
+        </div>
+        
+
+        <div class="right">
+            <input type="button" class="comment-cta" (click)="history(historycontent)" value="History">
+            <input type="button" class="redeem-cta" (click)="minus(content, redeemcontent)" value="Redeem Points">
+            
+        </div>
+    </div>
+
+    <div class="secondmenu">
+        <div class="menulist2">
         <div class="coffees">
             <a href="#">DOUBLE EXPRESSO</a>
-            <input type="submit" class="order-cta" (click)="add()" value="order" />
-          </div>
-          <div class="coffees">
+            <input type="submit" class="order-cta space" (click)="add()" value="Buy">
+        </div>
+        <div class="coffees">
             <a href="#">BLACK COFFEE</a>
-            <input type="submit" class="order-cta" (click)="add()" value="order" />
-          </div>
-          <div class="coffees">
+            <input type="submit" class="order-cta space" (click)="add()" value="Buy">
+        </div>
+        <div class="coffees">
             <a href="#">CAPPUCCINO</a>
-            <input type="submit" class="order-cta" (click)="add()" value="order" />
-          </div>
-          <div class="coffees">
+            <input type="submit" class="order-cta space" (click)="add()" value="Buy">
+        </div>
+        <div class="coffees">
             <a href="#">TEA</a>
-            <input type="submit" class="order-cta" (click)="add()" value="order" />
-          </div>
+            <input type="submit" class="order-cta space" (click)="add()" value="Buy">
+        </div>
+        </div>
     </div>
 </div>
+

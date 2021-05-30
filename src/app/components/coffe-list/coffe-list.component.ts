@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-coffe-list',
@@ -8,11 +9,37 @@ import { Component, OnInit } from '@angular/core';
 export class CoffeListComponent  {
 
   public currentNumber = 0;
-  constructor () { }
-  
+  public pointNumber = 0;
+  public pointsminus = 0;
+  public oldcurrentNumber = 0;
+  closeResult: string;
+
+  constructor(private modalService: NgbModal) {}
+
+    //Points gets added when a user buys 10 coffees
   public add () {
     this.currentNumber++;
+    if(this.currentNumber == 10) {
+      this.pointNumber++;
+      this.oldcurrentNumber++;
+      this.currentNumber = 0;
+    }
   }
   
+  //redeem points after the user has 5 points
+  public minus (content, redeemcontent) {
+    if(this.pointNumber >= 5) {
+      this.pointNumber = this.pointNumber - 5;
+      this.modalService.open(redeemcontent, { centered: true });
+    }
+    else {
+      this.currentNumber;
+      this.modalService.open(content, { centered: true });
+    }
+  }
 
+    //History of all points
+  public history (historycontent) {
+    this.modalService.open(historycontent, { centered: true });
+  }
 }
