@@ -61,22 +61,12 @@
 
     <div class="secondmenu">
         <div class="menulist2">
-        <div class="coffees">
-            <a href="#">DOUBLE EXPRESSO</a>
-            <input type="submit" class="order-cta space" (click)="add()" value="Buy">
-        </div>
-        <div class="coffees">
-            <a href="#">BLACK COFFEE</a>
-            <input type="submit" class="order-cta space" (click)="add()" value="Buy">
-        </div>
-        <div class="coffees">
-            <a href="#">CAPPUCCINO</a>
-            <input type="submit" class="order-cta space" (click)="add()" value="Buy">
-        </div>
-        <div class="coffees">
-            <a href="#">TEA</a>
-            <input type="submit" class="order-cta space" (click)="add()" value="Buy">
-        </div>
+          <ul>
+            <li *ngFor="let product of products" class="coffees">
+                <a href="#">{{product.name}}</a>
+                <input type="submit" class="order-cta space" (click)="add()" value="Buy">
+            </li>
+          </ul>
         </div>
     </div>
 </div>
