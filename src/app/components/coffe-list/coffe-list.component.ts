@@ -8,6 +8,7 @@ import { PRODUCTS } from '../../services/mock-products';
   templateUrl: './coffe-list.component.html',
   styleUrls: ['./coffe-list.component.css']
 })
+
 export class CoffeListComponent  {
   products = PRODUCTS;
   public currentNumber = 0;

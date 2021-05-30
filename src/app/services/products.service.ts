@@ -5,6 +5,6 @@ import { Product } from '../models/product';
   providedIn: 'root'
 })
 export class ProductsService {
-
   constructor() { }
 }
+

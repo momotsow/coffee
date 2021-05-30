@@ -7,7 +7,6 @@ import { CoffeListComponent } from './components/coffe-list/coffe-list.component
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { NgbModule, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
-
 const routes: Routes = [
   { path: '', component: AppComponent },
 ];
