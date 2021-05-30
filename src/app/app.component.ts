@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coffee';
+  private currentNumber = 0;
+constructor () { }
+
+private add() {
+  this.currentNumber++;
+}
+
+
 }
